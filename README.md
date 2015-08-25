@@ -1,6 +1,6 @@
 ## README
 
-#### Using Bcrypt with Rails 4 for user authentication.
+#### This README documents the steps used to integrate Bcrypt with Rails 4 for user authentication. Fully functional but unable to display error in view if user's password and password confirmation does not match when signing up.
 
 * Add `gem 'bcrypt', '~> 3.1.7'` in Gemfile
 * bundle install
@@ -22,8 +22,9 @@
 * rails g controller sessions
 
 * In `app/helpers/sessions_helper.rb` add
-`def current_user
-    @current_user ||= User.find(session[:user_id]) if session[:user_id]
-  end`
+```ruby
+def current_user
+  @current_user ||= User.find(session[:user_id]) if session[:user_id]
+end```
 
 * In `app/controllers/application_controller` add `include SessionsHelper`
