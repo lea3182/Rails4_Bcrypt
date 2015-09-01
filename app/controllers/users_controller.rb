@@ -8,16 +8,15 @@ class UsersController < ApplicationController
   end
 
   def new
-    
+    @user = User.new
   end
 
   def create
     @user = User.create(user_params)
-    if @user
+    if @user.save
 
-    redirect_to user_path(@user)
+    redirect_to user_path(@user), :notice => "Signed Up!"  # notice not working
     else
-      @error = "Password does not match"
       render :new
     end
   end
