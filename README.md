@@ -1,6 +1,6 @@
 ## README
 
-#### This README documents the steps used to integrate Bcrypt with Rails 4 for user authentication. Fu
+#### This README documents the steps used to integrate Bcrypt with Rails 4 for user authentication. 
 
 * Add `gem 'bcrypt', '~> 3.1.7'` in Gemfile
 * bundle install
