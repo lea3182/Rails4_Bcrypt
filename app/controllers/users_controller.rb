@@ -14,10 +14,10 @@ class UsersController < ApplicationController
   def create
     @user = User.create(user_params)
     if @user.save
-
-    redirect_to user_path(@user), :notice => "Signed Up!"  # notice not working
+    # flash[:notice] = "Sign Up Successful"
+    redirect_to user_path(@user), :notice => "Sign Up Successful"
     else
-      render :new
+    ender :new
     end
   end
 

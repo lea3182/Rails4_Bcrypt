@@ -1,3 +1,10 @@
-Hello <%= @user.name %>
+<div>
+  <% if :notice %>
+    <%= flash[:notice] %>
+  <% end %>
+</div>
+
+<h3>Hello <%= @user.name %></h3>
+
 
 <%= button_to "Logout", logout_path(@user), :method => :delete %>
